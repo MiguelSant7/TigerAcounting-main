@@ -1,0 +1,80 @@
+# Arquivo .gitignore para um projeto Full-Stack (React + Backend)
+
+### Dependências e Build ###
+# Ignora as pastas de dependências do Node.js/npm/yarn
+node_modules/
+# Ignora a pasta de build do frontend (gerada por 'npm run build')
+build/
+dist/
+.npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+
+### Backend (Python/Flask/Django) ###
+# Ignora ambientes virtuais
+.venv/
+venv/
+env/
+# Ignora caches e arquivos compilados do Python
+__pycache__/
+*.pyc
+# Arquivos de banco de dados local
+*.sqlite3
+db.sqlite3
+# Arquivos de ambiente
+instance/
+
+
+### Arquivos de Ambiente ###
+# Ignora arquivos de variáveis de ambiente que contêm segredos
+# IMPORTANTE: Faça commit de um arquivo de exemplo, como '.env.example'
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+
+### IDEs & Editores de Código ###
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+# JetBrains (WebStorm, PyCharm, etc.)
+.idea/
+# Sublime Text
+*.sublime-workspace
+# Atom
+.project.history
+
+
+### Testes ###
+# Ignora relatórios de cobertura de testes
+coverage/
+.nyc_output/
+
+
+### Sistema Operacional ###
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+# Linux
+*~
+
+
+### Logs ###
+# Ignora arquivos de log
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

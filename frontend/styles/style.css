@@ -1,0 +1,1180 @@
+/* Importação de Fontes Google fonts*/
+
+@import url('https://fonts.googleapis.com/css2?family=Habibi&display=swap');
+
+/* Importação de Fontes Locais */
+@font-face {
+  font-family: 'Futura';
+  src: url('fonts/FutuBd.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url('fonts/FutuBdIt.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url('fonts/FutuMd.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url('fonts/FutuMdIt.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url('fonts/FuturaBoldBT.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url('fonts/FuturaBoldItalicBT.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url('fonts/FuturaMediumBT.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url('fonts/FuturaMediumItalicBT.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+* { /* Estilos para todos os elementos da página */
+  /*transition: all 0.2s linear; Adiciona transição suave para todas as propriedades */
+  scroll-behavior: smooth;
+  font-family: 'futura', sans-serif;
+}
+
+/* Estilização de ScrollBar */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(to bottom, black, gray);
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 3px;
+  border-radius: 10px;
+  background: var(--gold-gradient);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-gradient);
+  --gold-gradient: linear-gradient(
+   135deg,
+   #000000 0%,
+   #000000 77%
+ );
+}
+
+
+:root { /* Definição de Variaveis CS para cores e gradientes */
+  --bg: #fffcfae9;
+  --azul-ID: #121414cb;
+  --azul-dark: #19191c;
+  --roxo-ID: #B59BAD;
+  --gold: #C9A771;
+  --gold-dark: #2a2626;
+  --roxo-dark: #000000e1;
+  --branco-ID: #FFFFFF;
+  --gold-gradient: linear-gradient(
+    35deg,  
+    #69471C 0%,
+    #C9A771 77%
+  );
+  --green-gradient: linear-gradient(
+      35deg,
+      #1C691F 0%,
+      #47C04C 77%
+  );
+  --violet-gradient: linear-gradient( 
+    35deg,
+    #392631 0%,
+    #B59BAD 77%
+  );
+  --especialidades-gradient-right: linear-gradient(to right,
+  rgba(57,38,49,0) 0%,
+  rgb(38, 37, 36) 35%,
+  rgb(1, 1, 1) 100%);
+  --especialidades-gradient-left: linear-gradient(to left,
+  rgba(57,38,49,0) 0%,
+  rgb(38, 37, 36) 35%,
+  rgb(1, 1, 1) 100%);
+  --especialidades-gradient-top: linear-gradient(to bottom,
+  rgba(57,38,49,0) 0%,
+  rgb(38, 37, 36) 35%,
+  rgb(1, 1, 1) 100%);
+}
+
+/* Configurações de Texto */
+
+h1 {
+  font-family: "Habibi", serif;
+  font-weight: lighter;
+  font-size: 4.4rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: "Habibi", serif;
+  font-weight: lighter;
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin: 0 0 2rem 0;
+}
+
+h3 {
+  font-family: 'Futura';
+  font-weight: 500;
+  text-transform: capitalize;
+  font-size: 3.2rem;
+  color: var(--gold);
+}
+
+h4 {
+  font-family: 'Futura';
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  color:darkorange;
+  margin: 0;
+}
+
+p {
+  font-size: 2rem;
+  font-weight: 500;
+  color: white;
+}
+
+/* Estilizações do HTML */
+
+html {
+  font-size: 62.5%;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0 auto;
+  background-color: var(--bg);
+  user-select: none;
+}
+
+main {
+  width: 100%;
+}
+
+.content {
+  margin: 0 auto;
+  padding: 15em 0;
+  max-width: 1280px;
+  width: 90%;
+}
+
+/* Botões Geral*/
+
+button { 
+  min-width: 300px;
+  font-size: 2.2rem;
+  color: white;
+  padding: .75em 1.5em;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 5px 5px 5px 0px rgb(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+/* cores dos botões */
+.gold{
+  background-image: var(--gold-gradient);
+}
+
+.green {
+  background-image: var(--green-gradient);
+}
+
+.violet {
+  background-image: var(--violet-gradient);
+}
+
+
+/* Cabeçalho */
+header {
+  background-color: rgb(21, 20, 19);
+}
+
+#first-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 90%;
+  padding: 1em;
+}
+
+#first-nav div {
+  width: 25%;
+  padding: 0;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
+
+#first-nav img {
+  max-width: 100px;
+  width: 100%;
+  margin-left: -25%;
+}
+
+#mobile-nav {
+  display: none;
+}
+
+#first-nav a {
+  font-family: 'futura';
+  font-size: 2.2rem;
+  color: white;
+  text-decoration: none;
+}
+
+#first-nav a:hover { 
+  color: var(--gold);
+}
+
+.sidebar {
+  display: none;
+}
+
+/* Seção Home */
+
+.home {
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0),
+   rgba(3, 3, 3, 0) 20vw,
+   rgba(240,233,238,1) 50vw, 
+   rgba(240,233,238,1) 80vw, 
+   rgba(240,233,238,1) 100vw),
+    url(imgs/escritorio\ sertec.jpeg); 
+  background-size: contain;
+  background-repeat: no-repeat; 
+  background-position: right;
+}
+
+.home .content{
+  padding: 7em 0 22em 0;
+}
+
+.home .headline{
+  width: 55%;
+}
+
+.home .buttons{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.home h1 {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.home h2 {
+  color: var(--azul-ID);
+  text-transform: none;
+  padding: 0;
+  margin: 0;
+}
+
+.home p {
+  font-size: 2.4rem;
+  color: black;
+}
+
+/* Seção lead */
+
+.lead {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2em;
+  margin: -7em 0;
+}
+
+.lead .content{
+  padding: 0 0;
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+}
+
+.lead .box-lead {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  background-color: var(--roxo-dark);
+  padding: 2em 2em;
+  color: white;
+  border-radius: .5em;
+  box-shadow: 4px 4px 4px 0px rgb(0, 0, 0, 0.25);
+}
+
+.lead img{
+  width: 20%;
+  height: fit-content;
+  align-self: center;
+}
+
+.lead p {
+  font-size: 2.2rem;
+}
+
+/* Seção Serviços */
+
+.serviços {
+  background-color: var(--azul-ID);
+}
+
+.serviços .content{
+  padding-top: 20em;
+  display: flex;
+  flex-direction: column;
+}
+
+#box-service1 {
+  display: flex;
+  gap: 4vw;
+  justify-content: center;
+}
+
+#box-service2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4em;
+  justify-content: space-evenly;
+}
+
+.serviço-box-father div{
+  flex-grow: 1;
+  flex-basis: 30%;
+  max-width: 320px;
+  min-width: 250px;
+  padding: 4em 3em;
+  margin: 3em 0;
+  border-radius: .5em;
+  border: var(--gold) 3px solid;
+  background-color: var(--azul-dark);
+  box-shadow: 5px 5px 5px 0px rgb(0, 0, 0, 0.25);
+}
+
+.serviço-box-father p, h3{
+  margin: 0 0 1em 0;
+  text-align: center;
+}
+
+.serviço-box-father #prefeituras {
+  font-size: 3rem;
+}
+
+.serviços h2{
+  color: var(--bg);
+  align-self: center;
+}
+
+#button-serviços, #button-sobre{
+  margin-top: 2em;
+  align-self: center;
+}
+
+#button-esp {
+  margin-top: 1em;
+}
+
+/* Seção Especialidades */
+
+.especialidades {
+  display: flex;
+  flex-direction: column;
+}
+
+.especialidades h2 {
+  align-self: center;
+}
+
+.especialidades .box-esp{
+  display: flex;
+  padding: 4em 3em;
+  margin: 3.5em 0em;
+  border-radius: .5em;
+  border: var(--gold) 3px solid;
+  background-color: var(--roxo-dark);
+  box-shadow: 10px 10px 10px 0px rgb(0, 0, 0, 0.25);
+}
+
+.box-esp div {
+  width: 66%;
+}
+
+#advogado, #agencia, #mei {
+  justify-content: end;
+  background-size: contain;
+  background-repeat: no-repeat; 
+  background-position: left;
+}
+
+#saude, #comercio, #publico {
+  background-size: contain;
+  background-repeat: no-repeat; 
+  background-position: right;
+}
+
+#advogado {
+  background-image: var(--especialidades-gradient-right), url(imgs/advogado.jpg); 
+}
+
+#saude {
+  background-image: var(--especialidades-gradient-left), url(imgs/saude.jpg); 
+}
+
+#agencia {
+  background-image: var(--especialidades-gradient-right), url(imgs/agencia.jpg); 
+}
+
+#comercio {
+  background-image: var(--especialidades-gradient-left), url(imgs/comercio.jpg); 
+}
+
+#mei {
+  background-image: var(--especialidades-gradient-right), url(imgs/mei.jpg); 
+}
+
+#publico {
+  background-image: var(--especialidades-gradient-left), url(imgs/publico.jpg); 
+}
+
+/* Seção Parceiros */
+
+.parceiros {
+  background-color: var(--roxo-dark);
+}
+
+.parceiros #logo{
+  width: 300px;
+  margin: 3em 0 0 0;
+}
+
+.parceiros h2{
+  margin-bottom: 5rem;
+  color: var(--gold);
+}
+
+.parceiros h4{
+  font-size: 3.8rem;
+  text-transform: none;
+  color: var(--branco-ID);
+}
+
+.parceiros p{
+  font-size: 3rem;
+}
+
+.parceiros .content {
+  display: flex;
+}
+
+.parceiros .content div {
+  width: 50%;
+}
+
+#demonstrativo-mob {
+  display: none;
+}
+
+.parceiros #demonstrativo{
+  width: 100%;
+  margin: 0;
+  align-self: baseline;
+  justify-self: center;
+}
+
+/* Seção Sobre */
+
+.sobre {
+  display: flex;
+  flex-direction: column;
+}
+
+.sobre h2 {
+  align-self: center;
+}
+
+.sobre .sobre-box {
+  display: flex;
+  padding: 4em 4em;
+  margin: 3.5em 0;
+  border-radius: .5em;
+  border: var(--gold) 3px solid;
+  background-color: var(--azul-dark);
+  box-shadow: 10px 10px 10px 0px rgb(0, 0, 0, 0.25);
+}
+
+.sobre-box div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+.sobre-box img {
+  width: 100%;
+  max-width: 320px;
+  height: fit-content;
+  align-self: center;
+}
+
+.sobre #div2 {
+  background-image: linear-gradient(to left,
+  rgba(38,42,57,0) 0%,
+  rgba(38,42,57,0) 20%,
+  rgb(0, 0, 0) 45%,
+  rgb(20, 21, 24) 100%), url(imgs/escritorio\ serctec\ 2.jpeg); 
+  background-size: contain;
+  background-repeat: no-repeat; 
+  background-position: right;
+}
+
+/* Seção Contato */
+
+.contato {
+  background-color: var(--azul-dark);
+}
+
+.contato h2{
+  color: var(--gold);
+}
+
+.contato .layout{
+  display: flex;
+  justify-content: space-between;
+  gap: 4em;
+}
+
+.contato #c1 {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+
+.contato #c2 {
+  flex: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contato #c3 {
+  flex: 2;
+}
+
+.contato #c1 div{
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+#c3 div {
+  display: flex;
+  align-items: start;
+  gap: 2em;
+}
+#c3 div p {
+  margin: 0 0 1em 0;
+}
+
+.contato #c1 img{
+  width: 40px;
+  height: fit-content;
+}
+
+.contato #c2 img{
+  width: 60%;
+  margin-left: 4em;
+}
+
+.contato #c3 img{
+  width: 70px;
+  height: fit-content;
+}
+
+.contato h3 {
+  color: var(--branco-ID);
+  text-transform: none;
+  text-align: left;
+}
+
+.contato #redes-sociais {
+  justify-content: start;
+}
+
+.contato #redes-sociais img {
+  width: 60px;
+  margin-right: 4em;
+}
+
+.contato .maxbox {
+  display: flex;
+  width: 600px;
+  height: 100%;
+  background-color: var(--roxo-ID);
+}
+ 
+iframe {
+  width: 100%;
+  height: 100%;
+  max-height: 280px;
+  border-radius: .5em;
+}
+
+/* Rodapé */
+
+footer {
+  background-color: var(--azul-dark);
+}
+
+footer .content{
+  padding: 2em 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer a, footer p {
+  font-family: 'futura';
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--gold);
+}
+
+@media screen and (min-width: 1400px) { /*Adaptação Mobile Home */
+  .home {
+    background-image: linear-gradient(to left, rgba(240,233,238,0),
+     rgba(240,233,238,0) 20vw,
+     rgba(240,233,238,1) 40vw, 
+     rgba(240,233,238,1) 60vw, 
+     rgba(240,233,238,1) 100vw),
+      url(imgs/escritorio\ sertec.jpeg); 
+    background-size: contain;
+    background-repeat: no-repeat; 
+    background-position: right;
+  }
+}
+
+@media screen and (max-width: 999px) { /* Header Mobile Resposiva */ 
+
+  #first-nav {
+    display: none;
+  }
+
+  #mobile-nav {
+    display: block;
+  }
+
+  #mobile-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 90%;
+    padding: 1em;
+  }
+  
+  #mobile-nav #logo {
+    width: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+
+  #mobile-nav img {
+    max-width: 300px;
+    width: 100%;
+  }
+
+  .mobile-menu-icon {
+    display: flex;
+    width: 50%;
+    color: white;
+    font-size: 3em;
+    align-self: center;
+    justify-content: center;
+}
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    width: 180px;
+    height: fit-content;
+    padding: 0 2em 2em 0;
+    background-color: var(--azul-ID);
+    border-radius: 0 0 0 .5em;
+    color: white;
+    right: -200px;
+    transition: right 0.3s ease-in-out;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    box-shadow: -5px 5px 5px 0 rgb(0, 0, 0, 0.25);
+}
+
+  .sidebar ul {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      text-align: left;
+  }
+
+  .sidebar ul a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.8rem;
+      padding: .5em 0;
+      transition: color 0.3s;
+  }
+
+  .sidebar ul a:hover {
+      color: var(--gold);
+  }
+
+  .sidebar.show {
+      right: 0;
+  }
+
+  .close-btn {
+    align-self: flex-end;
+    margin: .5em 0 0 0;
+    cursor: pointer;
+    font-size: 3em;
+  }
+
+  .fa-solid:hover {
+    color: var(--gold);
+  }
+}
+
+@media screen and (min-width: 680px) and (max-width: 768px){ /*Adaptação Mobile Especiliadades */
+  #advogado, #agencia, #mei, #saude, #comercio, #publico {
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 1240px) { /*Adaptação de Quebra de Layout Home e Lead*/
+  .home {
+    background-size: cover;
+  }
+
+  .lead {
+    margin: -9em 0;
+  }
+}
+
+@media screen and (max-width: 1160px) { /*Adaptação Mobile Contato */
+  .contato #email p {
+    word-break: break-word;
+  }
+}
+
+@media screen and (max-width: 982px) { /*Adaptação Mobile Sobre */
+
+  .sobre .sobre-box {
+    flex-direction: column-reverse;
+    gap: 4em;
+  }
+  
+  .sobre-box div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .sobre #div2 {
+    padding-top: 50vh;
+    background-image: linear-gradient(to bottom,
+    rgba(38,42,57,0) 0%,
+    rgba(38,42,57,0) 100%), url(imgs/escritorio\ serctec\ 2\ mob.jpg); 
+    background-position: top;
+  }
+}
+
+@media screen and (max-width: 768px) { /* Configurações Gerais de responsividade */
+
+  button {
+    width: 100%;
+    min-width: fit-content;
+    font-size: 1.8rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+  
+  h2 {
+    font-size: 3.2rem;
+    margin: 0 0 2rem 0;
+  }
+  
+  h3 {
+    font-size: 2.8rem;
+  }
+  
+  h4 {
+    font-size: 2.2rem;
+    margin: 0;
+  }
+  
+  p {
+    font-size: 1.8rem;
+  }
+
+  .home {
+    background-image: linear-gradient(to top,
+      rgba(240,233,238,0),
+      rgba(240,233,238,0),
+      rgba(240,233,238,1),
+      rgba(240,233,238,1),
+      rgba(240,233,238,1)),
+    url(imgs/escritorio\ sertec\ mob.png); 
+    background-position: bottom;
+    padding-bottom: 40vh;
+    background-size: contain;
+  }
+  
+  .home .headline{
+    width: 100%;
+  }
+
+  .home h1{
+    font-size: 3.4rem;
+  }
+
+  .lead {
+    margin: 0 0;
+    padding-top: 0;
+    background-color: var(--azul-ID);
+  }
+  
+  .lead .content{
+    padding: 0 0;
+    margin-top: -8vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+  }
+  
+  .lead .box-lead {
+    align-items: center;
+  }
+  
+  .lead img{
+    width: 20%;
+    height: fit-content;
+    align-self: center;
+  }
+  
+  .lead p {
+    font-size: 2rem;
+  }
+  
+  .serviços .content{
+    padding-top: 20em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+  
+  #box-service1 {
+    flex-wrap: wrap;
+    gap: 2em;
+  }
+  
+  #box-service2 {
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: space-evenly;
+  }
+  
+  .serviço-box-father div{
+    min-width: 200px;
+  }
+  
+  .serviço-box-father p, h3{
+    margin: 0 0 1em 0;
+    text-align: center;
+  }
+  
+  .serviço-box-father #prefeituras {
+    font-size: 3rem;
+  }
+  
+  .serviços h2{
+    color: var(--bg);
+    align-self: center;
+    text-align: center;
+  }
+  
+  #button-serviços, #button-sobre{
+    margin-top: 2em;
+    align-self: center;
+  }
+  
+  .especialidades .box-esp{
+    padding: 25vh 3em 4em 3em;
+  }
+  
+  .box-esp div {
+    width: 100%;
+  }
+
+  #advogado, #agencia, #mei {
+    background-position: top;
+  }
+  
+  #saude, #comercio, #publico {
+    background-position: top;
+  }
+  
+  #advogado {
+    background-image: var(--especialidades-gradient-top), url(imgs/advogado.jpg); 
+  }
+  
+  #saude {
+    background-image: var(--especialidades-gradient-top), url(imgs/saude.jpg); 
+  }
+  
+  #agencia {
+    background-image: var(--especialidades-gradient-top), url(imgs/agencia.jpg); 
+  }
+  
+  #comercio {
+    background-image: var(--especialidades-gradient-top), url(imgs/comercio.jpg); 
+  }
+  
+  #mei {
+    background-image: var(--especialidades-gradient-top), url(imgs/mei.jpg); 
+  }
+  
+  #publico {
+    background-image: var(--especialidades-gradient-top), url(imgs/publico.jpg); 
+  }
+  
+  .parceiros h4{
+    text-align: center;
+  }
+  
+  .parceiros p{
+    text-align: center;
+  }
+  
+  .parceiros .content div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #p2 {
+    display: none;
+  }
+
+  .parceiros #demonstrativo-mob{
+    display: block;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .contato .layout{
+    flex-direction: column;
+    gap: 4em;
+  }
+  
+  .contato #c1 {
+    flex: none;
+    flex-direction: column;
+    gap: 2em;
+    width: 100%;
+  }
+  
+  #c3 div p {
+    margin: 0 0 1em 0;
+  }
+  
+  .contato #c2 img{
+    width: 50%;
+    margin: 4em;
+  }
+  
+  .contato #redes-sociais {
+    max-width: 300px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 4em;
+  }
+  
+  .contato #redes-sociais img {
+    width: 50px;
+    margin: 0;
+  }
+  
+  .contato #local {
+    margin-bottom: 2em;
+  }
+
+  footer .content{
+    gap: 2em;
+    flex-direction: column;
+  }
+  
+  footer a, footer p {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 570px) { /* Adaptações Home Especialidades e Sobre */
+  .home {
+    background-image: linear-gradient(to top,
+      rgba(240,233,238,0)60vh,
+      rgba(240,233,238,1),
+      rgba(240,233,238,1)),
+    url(imgs/escritorio\ sertec\ mob.png); 
+    background-position: bottom;
+    padding-bottom: 20vh;
+}
+  .especialidades .box-esp{
+    padding-top: 20vh;
+  }
+
+  .sobre #div2 {
+    padding-top: 30vh;
+    background-image: linear-gradient(to bottom,
+    rgba(38,42,57,0) 0%,
+    rgba(38,42,57,0) 100%), url(imgs/escritorio\ serctec\ 2\ mob.jpg); 
+    background-position: top;
+  }
+}
+
+/* ANIMAÇÕES */
+
+.hidden {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.view {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: all 1s;
+}
+
+.lead .content :nth-child(2) {transition-delay: 200ms;}
+
+.lead .content :nth-child(3) {transition-delay: 400ms;}
+
+#box-service1 :nth-child(2){transition-delay: 200ms;}
+
+#box-service2 :nth-child(2){transition-delay: 200ms;}
+
+#box-service2 :nth-child(3){transition-delay: 400ms;}
+ 
+.serviços button {transition-delay: 600ms;}
+
+.contato #c2{
+  transition-delay: 1000ms;
+  transition: 5s;
+}
+
+.contato .layout #c3{transition-delay: 200ms;}
+
+/* Politicas e termos de Uso */
+
+.modal {
+  display: none; /* Escondido por padrão */
+  position: fixed; /* Fica fixo na tela */
+  z-index: 1000; /* Fica acima de outros elementos */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Habilita o scroll se necessário */
+  background-color: rgba(0,0,0,0.5); /* Fundo escuro com transparência */
+}
+
+.modal-content {
+  background-color: var(--azul-dark);
+  margin: 15% auto; /* Centraliza o modal na tela */
+  padding: 4em;
+  border: 3px solid var(--gold);
+  width: 75%; /* Largura do modal */
+  max-width: 1000px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  border-radius: 5px;
+}
+
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: var(--gold);
+  text-decoration: none;
+}

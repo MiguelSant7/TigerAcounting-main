@@ -19,7 +19,7 @@ class Usuario(BaseModel):
     ativo: bool
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 # Schema para a resposta do token de login
 class Token(BaseModel):

@@ -54,8 +54,8 @@ const SignupPage = () => {
           <input type="tel" value={telefone} onChange={(e) => setTelefone(e.target.value)} required />
         </div>
         <div className="form-group">
-          <label>Senha</label>
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+            <label>Senha</label>
+            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required maxLength={72} />
         </div>
         <button type="submit" className="btn">Cadastrar</button>
         {error && <p className="error-message">{error}</p>}

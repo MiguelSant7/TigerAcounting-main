@@ -5,8 +5,10 @@ from sqlalchemy.orm import Session
 from datetime import timedelta
 
 # Importações locais
-from . import models, schemas, auth
-from .database import SessionLocal, engine
+import models
+import schemas
+import auth
+from database import SessionLocal, engine
 
 # Cria as tabelas no banco de dados (se não existirem)
 models.Base.metadata.create_all(bind=engine)

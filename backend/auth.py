@@ -7,8 +7,9 @@ from jose import JWTError, jwt
 from passlib.context import CryptContext
 from sqlalchemy.orm import Session
 
-from . import models, schemas
-from .database import SessionLocal
+import models
+import schemas
+from database import SessionLocal
 
 # --- Configuração de Segurança ---
 SECRET_KEY = "sua-chave-secreta-super-segura" # Mude isso para uma chave real e segura
@@ -19,7 +20,15 @@ ACCESS_TOKEN_EXPIRE_MINUTES = 30
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 # Esquema OAuth2
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login/")
+
+# Dependency para obter a sessão do banco de dados
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
 
 
 def verify_password(plain_password, hashed_password):
@@ -74,7 +83,7 @@ def authenticate_user(db: Session, email: str, password: str):
         return False
     return user
 
-def get_current_user(db: Session = Depends(SessionLocal), token: str = Depends(oauth2_scheme)):
+def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(get_db)):
     credentials_exception = HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
         detail="Não foi possível validar as credenciais",

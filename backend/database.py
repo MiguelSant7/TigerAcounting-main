@@ -2,11 +2,12 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-# ATENÇÃO: Substitua com suas credenciais do MySQL
-# Formato: "mysql+mysqlconnector://USUARIO:SENHA@HOST:PORTA/NOME_DO_BANCO"
-SQLALCHEMY_DATABASE_URL = "mysql+mysqlconnector://root:password@localhost:3306/tiger_accounting"
+SQLALCHEMY_DATABASE_URL = "sqlite:///./tiger_accounting.db"
 
-engine = create_engine(SQLALCHEMY_DATABASE_URL)
+# O connect_args é necessário apenas para o SQLite para permitir o uso em múltiplos threads
+engine = create_engine(
+    SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False}
+)
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 

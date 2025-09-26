@@ -79,12 +79,12 @@
 ::-webkit-scrollbar-thumb {
   -webkit-border-radius: 3px;
   border-radius: 10px;
-  background: var(--gold-gradient);
+  background: var(--orange1-gradient);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--gold-gradient);
-  --gold-gradient: linear-gradient(135deg,
+  background: var(--orange-gradient);
+  --orange-gradient: linear-gradient(135deg,
       #000000 0%,
       #000000 77%);
 }
@@ -93,24 +93,29 @@
 :root {
   /* Definição de Variaveis CS para cores e gradientes */
   --bg: #fffcfae9;
-  --azul-ID: #121414cb;
+  --dark-ID: #222120;
   --azul-dark: #19191c;
   --roxo-ID: #B59BAD;
   --gold: #C9A771;
   --gold-dark: #2a2626;
   --roxo-dark: #000000e1;
   --branco-ID: #FFFFFF;
+  --orange: #FF8C00;
+
+  --orange1-gradient: linear-gradient(68.62deg,
+      #995400 -12.18%,
+      #FF8C00 74.82%);
+
   --gold-gradient: linear-gradient(35deg,
       #69471C 18%,
       #C9A771 73%,
-      #FFF4D4 74%
-      );
+      #FFF4D4 74%);
   --green-gradient: linear-gradient(35deg,
-      #1C691F 0%,
-      #47C04C 77%);
-  --violet-gradient: linear-gradient(35deg,
-      #392631 0%,
-      #B59BAD 77%);
+      #1C691F -12.18%,
+      #47C04C 82%);
+  --orange-gradient: linear-gradient(35deg,
+      #5B3200 9.77%,
+      #945100 94.04%);
   --especialidades-gradient-right: linear-gradient(to right,
       rgba(57, 38, 49, 0) 0%,
       rgb(38, 37, 36) 35%,
@@ -148,7 +153,7 @@ h3 {
   font-weight: 500;
   text-transform: capitalize;
   font-size: 3.2rem;
-  color: var(--gold);
+  color: var(--orange);
 }
 
 h4 {
@@ -199,7 +204,6 @@ main {
 }
 
 /* Botões Geral*/
-
 button {
   min-width: 300px;
   font-size: 2.2rem;
@@ -218,15 +222,15 @@ button:hover {
 
 /* cores dos botões */
 .gold {
-  background-image: var(--gold-gradient);
+  background-image: var(--orange1-gradient);
 }
 
 .green {
   background-image: var(--green-gradient);
 }
 
-.violet {
-  background-image: var(--violet-gradient);
+.orange {
+  background-image: var(--orange-gradient);
 }
 
 
@@ -235,6 +239,7 @@ button:hover {
 header {
   background-color: #222120;
   width: 100%;
+
 }
 
 
@@ -245,121 +250,132 @@ header {
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
-  padding: 1em;header {
-  background-color: #222120;
-  width: 100%;
-}
+  padding: 1em;
 
-/* Nav principal */
-#first-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 1em 5%; /* sempre deixa 5% de respiro em cada lado */
-  box-sizing: border-box;
-}
+  header {
+    background-color: #222120;
+    width: 100%;
+  }
 
-.nav-center {
-  display: flex;
-  align-items: center;
-  gap: 2em; /* controla a distância entre links e login */
-}
-
-/* Logo */
-.logo img {
-  max-width: 70px;
-  height: auto;
-}
-
-/* Container da direita (links + botões) */
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 2em; /* espaço entre links e botões */
-  flex-wrap: wrap; /* permite quebrar para baixo se faltar espaço */
-}
-
-/* Links */
-
-.nav-links {
-  display: flex;
-  gap: 1.5em;
-  flex-wrap: wrap; /* não some, apenas quebra de linha */
-}
-
-.nav-links a {
-  font-family: 'futura', sans-serif;
-  font-size: 1.6rem;
-  color: white;
-  text-decoration: none;
-}
-
-.nav-links a:hover {
-  color: #f2a900;
-}
-
-/* Botões */
-.nav-login {
-  display: flex;
-  gap: 0.5em;
-}
-
-.btn-login,
-.btn-signup {
-  padding: 4px 12px;
-  border-radius: 4px;
-  font-size: 1.4rem;
-  font-weight: bold;
-  text-decoration: none;
-  border: 2px solid #f2a900;
-  transition: background 0.2s;
-  white-space: nowrap; /* impede quebrar dentro do botão */
-}
-
-.btn-login {
-  background: transparent;
-  color: white;
-}
-
-.btn-login:hover {
-  background: #f2a900;
-  color: black;
-}
-
-.btn-signup {
-  background: #f2a900;
-  color: black;
-}
-
-.btn-signup:hover {
-  background: transparent;
-  color: white;
-}
-
-/* ===== Responsividade ===== */
-@media (max-width: 900px) {
+  /* Nav principal */
   #first-nav {
-    flex-direction: column; /* logo em cima, links embaixo */
-    align-items: flex-start;
-    gap: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1em 5%;
+    /* sempre deixa 5% de respiro em cada lado */
+    box-sizing: border-box;
   }
 
-  .nav-right {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1em;
+  .nav-center {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    /* controla a distância entre links e login */
   }
+
+  /* Logo */
+  .logo img {
+    max-width: 70px;
+    height: auto;
+  }
+
+  /* Container da direita (links + botões) */
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    /* espaço entre links e botões */
+    flex-wrap: wrap;
+    /* permite quebrar para baixo se faltar espaço */
+  }
+
+  /* Links */
 
   .nav-links {
-    flex-direction: column;
-    gap: 0.8em;
+    display: flex;
+    gap: 1.5em;
+    flex-wrap: wrap;
+    /* não some, apenas quebra de linha */
   }
 
-  .nav-login {
-    flex-direction: row; /* mantém login e signup lado a lado */
+  .nav-links a {
+    font-family: 'futura', sans-serif;
+    font-size: 1.6rem;
+    color: white;
+    text-decoration: none;
   }
-}
+
+  .nav-links a:hover {
+    color: orange;
+  }
+
+  /* Botões */
+  .nav-login {
+    display: flex;
+    gap: 0.5em;
+  }
+
+  .btn-login,
+  .btn-signup {
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid orange;
+    transition: background 0.2s;
+    white-space: nowrap;
+    /* impede quebrar dentro do botão */
+  }
+
+  .btn-login {
+    background: transparent;
+    color: white;
+  }
+
+  .btn-login:hover {
+    background: orange;
+    color: black;
+  }
+
+  .btn-signup {
+    background: orange;
+    color: black;
+  }
+
+  .btn-signup:hover {
+    background: transparent;
+    color: white;
+  }
+
+  /* responsividade */
+  @media (max-width: 900px) {
+    #first-nav {
+      flex-direction: column;
+      /* logo em cima, links embaixo */
+      align-items: flex-start;
+      gap: 1em;
+    }
+
+    .nav-right {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1em;
+    }
+
+    .nav-links {
+      flex-direction: column;
+      gap: 0.8em;
+    }
+
+    .nav-login {
+      flex-direction: row;
+      /* mantém login e signup lado a lado */
+    }
+  }
+
   background-color: #222120;
 }
 
@@ -383,7 +399,7 @@ header {
 }
 
 .nav-links a:hover {
-  color: #f2a900;
+  color: orange;
 }
 
 /* Botões à direita */
@@ -400,7 +416,7 @@ header {
   font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
-  border: 1.6px solid #f2a900;
+  border: 1.6px solid orange;
   transition: background 0.2s;
 }
 
@@ -410,12 +426,12 @@ header {
 }
 
 .btn-login:hover {
-  background: #f2a900;
+  background: orange;
   color: black;
 }
 
 .btn-signup {
-  background: #f2a900;
+  background: orange;
   color: black;
 }
 
@@ -425,19 +441,29 @@ header {
 }
 
 
-/* Seção Home */
+/* Seção Home FALTANDO!!!! */
 
+/* ------------------------------------------------------------ */
 .home {
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0),
-      rgba(3, 3, 3, 0) 20vw,
+  background: url(/landing/imgs/Fundo_SejaNossoCliente.png);
+  background-image: linear-gradient(to left, rgba(240, 233, 238, 0),
+      rgba(240, 233, 238, 0) 20vw,
       rgba(240, 233, 238, 1) 50vw,
       rgba(240, 233, 238, 1) 80vw,
       rgba(240, 233, 238, 1) 100vw),
-    url(imgs/escritorio\ Fundo_SejaNossoCliente);
+    url(/landing/imgs/Fundo_SejaNossoCliente.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
+
+  color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  min-height: 400px;
+
 }
+
+/* ------------------------------------------------------------ */
 
 .home .content {
   padding: 7em 0 22em 0;
@@ -454,14 +480,14 @@ header {
 }
 
 .home h1 {
-  background: var(--gold-gradient);
+  background: var(--orange-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .home h2 {
-  color: var(--azul-ID);
+  color: var(--dark-ID);
   text-transform: none;
   padding: 0;
   margin: 0;
@@ -513,7 +539,7 @@ header {
 /* Seção Serviços */
 
 .serviços {
-  background-color: var(--azul-ID);
+  background-color: var(--dark-ID);
 }
 
 .serviços .content {
@@ -543,7 +569,7 @@ header {
   padding: 4em 3em;
   margin: 3em 0;
   border-radius: .5em;
-  border: var(--gold) 3px solid;
+  border: var(--orange) 3px solid;
   background-color: var(--azul-dark);
   box-shadow: 5px 5px 5px 0px rgb(0, 0, 0, 0.25);
 }
@@ -589,7 +615,7 @@ h3 {
   padding: 4em 3em;
   margin: 3.5em 0em;
   border-radius: .5em;
-  border: var(--gold) 3px solid;
+  border: var(--orange) 3px solid;
   background-color: var(--roxo-dark);
   box-shadow: 10px 10px 10px 0px rgb(0, 0, 0, 0.25);
 }
@@ -616,27 +642,27 @@ h3 {
 }
 
 #advogado {
-  background-image: var(--especialidades-gradient-right), url(imgs/advogado.jpg);
+  background-image: var(--especialidades-gradient-right), url(/landing/imgs/advogado.jpg);
 }
 
 #saude {
-  background-image: var(--especialidades-gradient-left), url(imgs/saude.jpg);
+  background-image: var(--especialidades-gradient-left), url(/landing/imgs/saude.jpg);
 }
 
 #agencia {
-  background-image: var(--especialidades-gradient-right), url(imgs/agencia.jpg);
+  background-image: var(--especialidades-gradient-right), url(/landing/imgs/agencia.jpg);
 }
 
 #comercio {
-  background-image: var(--especialidades-gradient-left), url(imgs/comercio.jpg);
+  background-image: var(--especialidades-gradient-left), url(/landing/imgs/comercio.jpg);
 }
 
 #mei {
-  background-image: var(--especialidades-gradient-right), url(imgs/mei.jpg);
+  background-image: var(--especialidades-gradient-right), url(/landing/imgs/mei.jpg);
 }
 
 #publico {
-  background-image: var(--especialidades-gradient-left), url(imgs/publico.jpg);
+  background-image: var(--especialidades-gradient-left), url(/landing/imgs/publico.jpg);
 }
 
 /* Seção Parceiros */
@@ -652,7 +678,7 @@ h3 {
 
 .parceiros h2 {
   margin-bottom: 5rem;
-  color: var(--gold);
+  color: var(--orange);
 }
 
 .parceiros h4 {
@@ -685,10 +711,10 @@ h3 {
 }
 
 /* Seção Sobre */
-
 .sobre {
   display: flex;
   flex-direction: column;
+  gap: 6em;
 }
 
 .sobre h2 {
@@ -700,14 +726,14 @@ h3 {
   padding: 4em 4em;
   margin: 3.5em 0;
   border-radius: .5em;
-  border: var(--gold) 3px solid;
+  border: var(--orange) 3px solid;
   background-color: var(--azul-dark);
   box-shadow: 10px 10px 10px 0px rgb(0, 0, 0, 0.25);
 }
 
+
 .sobre-box div {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   width: 50%;
 }
@@ -719,15 +745,30 @@ h3 {
   align-self: center;
 }
 
-.sobre #div2 {
-  background-image: linear-gradient(to left,
-      rgba(38, 42, 57, 0) 0%,
-      rgba(38, 42, 57, 0) 20%,
-      rgb(0, 0, 0) 45%,
-      rgb(20, 21, 24) 100%), url(imgs/escritorio\ serctec\ 2.jpeg);
+
+
+
+
+/* estilização da imagem de fundo sobre  */
+#div2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+
+
+  /* Imagem de fundo + gradiente */
+  background-image:
+    linear-gradient(to right, rgba(255, 140, 0, 0.119), rgba(20, 20, 20, 0.982) 30%, rgb(15, 14, 14)),
+    url(/landing/imgs/Fundo_SobreNos.png);
   background-size: contain;
+  background-position: left center;
   background-repeat: no-repeat;
-  background-position: right;
+
+  color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  min-height: 400px;
 }
 
 /* Seção Contato */
@@ -737,7 +778,7 @@ h3 {
 }
 
 .contato h2 {
-  color: var(--gold);
+  color: var(--orange);
 }
 
 .contato .layout {
@@ -846,7 +887,7 @@ footer p {
 }
 
 footer a:hover {
-  color: var(--gold);
+  color: var(--orange);
 }
 
 @media screen and (min-width: 1400px) {
@@ -870,27 +911,38 @@ footer a:hover {
 /* Padrão (desktop) */
 /* ============================= */
 #first-nav {
-  display: flex; /* navbar principal aparece */
+  display: flex;
+  /* navbar principal aparece */
 }
 
 #mobile-nav {
-  display: none; /* navbar mobile escondida */
+  display: none;
+  /* navbar mobile escondida */
 }
 
 .sidebar {
-  display: none; /* menu lateral escondido */
+  display: none;
+  /* menu lateral escondido */
 }
+
+.sobre-box #img {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
 
 /* ============================= */
 /* Mobile (até 999px) */
 /* ============================= */
 @media screen and (max-width: 999px) {
   #first-nav {
-    display: none; /* esconde a nav desktop */
+    display: none;
+    /* esconde a nav desktop */
   }
 
   #mobile-nav {
-    display: flex; /* mostra a nav mobile */
+    display: flex;
+    /* mostra a nav mobile */
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
@@ -907,7 +959,8 @@ footer a:hover {
   }
 
   #mobile-nav img {
-    max-width: 120px; /* reduzido pra caber no mobile */
+    max-width: 120px;
+    /* reduzido pra caber no mobile */
     width: 100%;
   }
 
@@ -920,13 +973,15 @@ footer a:hover {
   }
 
   .sidebar {
-    display: flex; /* agora só aparece no mobile */
+    display: flex;
+    /* agora só aparece no mobile */
     position: fixed;
     top: 0;
-    right: -200px; /* escondida inicialmente */
+    right: -200px;
+    /* escondida inicialmente */
     width: 180px;
     height: 100vh;
-    background-color: var(--azul-ID);
+    background-color: var(--dark-ID);
     border-radius: 0 0 0 .5em;
     color: white;
     flex-direction: column;
@@ -936,7 +991,8 @@ footer a:hover {
   }
 
   .sidebar.show {
-    right: 0; /* aparece quando abre */
+    right: 0;
+    /* aparece quando abre */
   }
 
   .sidebar ul {
@@ -953,7 +1009,7 @@ footer a:hover {
   }
 
   .sidebar ul a:hover {
-    color: var(--gold);
+    color: var(--orange);
   }
 
   .close-btn {
@@ -965,16 +1021,19 @@ footer a:hover {
 
 @media screen and (min-width: 680px) and (max-width: 768px) {
   #first-nav {
-  display: flex; /* navbar principal aparece */
-}
+    display: flex;
+    /* navbar principal aparece */
+  }
 
-#mobile-nav {
-  display: none; /* navbar mobile escondida */
-}
+  #mobile-nav {
+    display: none;
+    /* navbar mobile escondida */
+  }
 
-.sidebar {
-  display: none; /* menu lateral escondido */
-}
+  .sidebar {
+    display: none;
+    /* menu lateral escondido */
+  }
 
 
   /*Adaptação Mobile Especiliadades */
@@ -1086,7 +1145,7 @@ footer a:hover {
   .lead {
     margin: 0 0;
     padding-top: 0;
-    background-color: var(--azul-ID);
+    background-color: var(--dark-ID);
   }
 
   .lead .content {
@@ -1295,7 +1354,7 @@ footer a:hover {
     padding-top: 30vh;
     background-image: linear-gradient(to bottom,
         rgba(38, 42, 57, 0) 0%,
-        rgba(38, 42, 57, 0) 100%), url(imgs/escritorio\ serctec\ 2\ mob.jpg);
+        rgba(38, 42, 57, 0) 100%), url(imgs\ mob.jpg);
     background-position: top;
   }
 }
@@ -1370,7 +1429,7 @@ footer a:hover {
   margin: 15% auto;
   /* Centraliza o modal na tela */
   padding: 4em;
-  border: 3px solid var(--gold);
+  border: 3px solid var(--orange);
   width: 75%;
   /* Largura do modal */
   max-width: 1000px;
@@ -1388,6 +1447,6 @@ footer a:hover {
 
 .close:hover,
 .close:focus {
-  color: var(--gold);
+  color: var(--orange);
   text-decoration: none;
 }

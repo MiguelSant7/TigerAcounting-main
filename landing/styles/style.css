@@ -59,7 +59,8 @@
   font-style: italic;
 }
 
-* { /* Estilos para todos os elementos da página */
+* {
+  /* Estilos para todos os elementos da página */
   /*transition: all 0.2s linear; Adiciona transição suave para todas as propriedades */
   scroll-behavior: smooth;
   font-family: 'futura', sans-serif;
@@ -83,15 +84,14 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--gold-gradient);
-  --gold-gradient: linear-gradient(
-   135deg,
-   #000000 0%,
-   #000000 77%
- );
+  --gold-gradient: linear-gradient(135deg,
+      #000000 0%,
+      #000000 77%);
 }
 
 
-:root { /* Definição de Variaveis CS para cores e gradientes */
+:root {
+  /* Definição de Variaveis CS para cores e gradientes */
   --bg: #fffcfae9;
   --azul-ID: #121414cb;
   --azul-dark: #19191c;
@@ -100,33 +100,29 @@
   --gold-dark: #2a2626;
   --roxo-dark: #000000e1;
   --branco-ID: #FFFFFF;
-  --gold-gradient: linear-gradient(
-    35deg,  
-    #69471C 0%,
-    #C9A771 77%
-  );
-  --green-gradient: linear-gradient(
-      35deg,
+  --gold-gradient: linear-gradient(35deg,
+      #69471C 18%,
+      #C9A771 73%,
+      #FFF4D4 74%
+      );
+  --green-gradient: linear-gradient(35deg,
       #1C691F 0%,
-      #47C04C 77%
-  );
-  --violet-gradient: linear-gradient( 
-    35deg,
-    #392631 0%,
-    #B59BAD 77%
-  );
+      #47C04C 77%);
+  --violet-gradient: linear-gradient(35deg,
+      #392631 0%,
+      #B59BAD 77%);
   --especialidades-gradient-right: linear-gradient(to right,
-  rgba(57,38,49,0) 0%,
-  rgb(38, 37, 36) 35%,
-  rgb(1, 1, 1) 100%);
+      rgba(57, 38, 49, 0) 0%,
+      rgb(38, 37, 36) 35%,
+      rgb(1, 1, 1) 100%);
   --especialidades-gradient-left: linear-gradient(to left,
-  rgba(57,38,49,0) 0%,
-  rgb(38, 37, 36) 35%,
-  rgb(1, 1, 1) 100%);
+      rgba(57, 38, 49, 0) 0%,
+      rgb(38, 37, 36) 35%,
+      rgb(1, 1, 1) 100%);
   --especialidades-gradient-top: linear-gradient(to bottom,
-  rgba(57,38,49,0) 0%,
-  rgb(38, 37, 36) 35%,
-  rgb(1, 1, 1) 100%);
+      rgba(57, 38, 49, 0) 0%,
+      rgb(38, 37, 36) 35%,
+      rgb(1, 1, 1) 100%);
 }
 
 /* Configurações de Texto */
@@ -160,7 +156,7 @@ h4 {
   font-weight: 500;
   text-transform: uppercase;
   font-size: 2.2rem;
-  color:darkorange;
+  color: darkorange;
   margin: 0;
 }
 
@@ -179,7 +175,8 @@ html {
   width: 100%;
 }
 
-html, body {
+html,
+body {
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -203,7 +200,7 @@ main {
 
 /* Botões Geral*/
 
-button { 
+button {
   min-width: 300px;
   font-size: 2.2rem;
   color: white;
@@ -220,7 +217,7 @@ button:hover {
 }
 
 /* cores dos botões */
-.gold{
+.gold {
   background-image: var(--gold-gradient);
 }
 
@@ -233,77 +230,224 @@ button:hover {
 }
 
 
+
 /* Cabeçalho */
 header {
-  background-color: rgb(21, 20, 19);
+  background-color: #222120;
+  width: 100%;
 }
+
 
 #first-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
   max-width: 1280px;
-  width: 90%;
-  padding: 1em;
-}
-
-#first-nav div {
-  width: 25%;
-  padding: 0;
-  display: flex;
-  justify-content: left;
-  align-items: left;
-}
-
-#first-nav img {
-  max-width: 100px;
   width: 100%;
-  margin-left: -25%;
+  margin: 0 auto;
+  padding: 1em;header {
+  background-color: #222120;
+  width: 100%;
 }
 
-#mobile-nav {
-  display: none;
+/* Nav principal */
+#first-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1em 5%; /* sempre deixa 5% de respiro em cada lado */
+  box-sizing: border-box;
 }
 
-#first-nav a {
-  font-family: 'futura';
-  font-size: 2.2rem;
+.nav-center {
+  display: flex;
+  align-items: center;
+  gap: 2em; /* controla a distância entre links e login */
+}
+
+/* Logo */
+.logo img {
+  max-width: 70px;
+  height: auto;
+}
+
+/* Container da direita (links + botões) */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 2em; /* espaço entre links e botões */
+  flex-wrap: wrap; /* permite quebrar para baixo se faltar espaço */
+}
+
+/* Links */
+
+.nav-links {
+  display: flex;
+  gap: 1.5em;
+  flex-wrap: wrap; /* não some, apenas quebra de linha */
+}
+
+.nav-links a {
+  font-family: 'futura', sans-serif;
+  font-size: 1.6rem;
   color: white;
   text-decoration: none;
 }
 
-#first-nav a:hover { 
-  color: var(--gold);
+.nav-links a:hover {
+  color: #f2a900;
 }
 
-.sidebar {
-  display: none;
+/* Botões */
+.nav-login {
+  display: flex;
+  gap: 0.5em;
 }
+
+.btn-login,
+.btn-signup {
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid #f2a900;
+  transition: background 0.2s;
+  white-space: nowrap; /* impede quebrar dentro do botão */
+}
+
+.btn-login {
+  background: transparent;
+  color: white;
+}
+
+.btn-login:hover {
+  background: #f2a900;
+  color: black;
+}
+
+.btn-signup {
+  background: #f2a900;
+  color: black;
+}
+
+.btn-signup:hover {
+  background: transparent;
+  color: white;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 900px) {
+  #first-nav {
+    flex-direction: column; /* logo em cima, links embaixo */
+    align-items: flex-start;
+    gap: 1em;
+  }
+
+  .nav-right {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.8em;
+  }
+
+  .nav-login {
+    flex-direction: row; /* mantém login e signup lado a lado */
+  }
+}
+  background-color: #222120;
+}
+
+/* Logo */
+.logo img {
+  max-width: 40px;
+  height: auto;
+}
+
+/* Links do meio */
+.nav-links {
+  display: flex;
+  gap: 2em;
+}
+
+.nav-links a {
+  font-family: 'futura', sans-serif;
+  font-size: 1.7rem;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #f2a900;
+}
+
+/* Botões à direita */
+.nav-login {
+  display: flex;
+  gap: 0.5em;
+  margin-right: 2em
+}
+
+.btn-login,
+.btn-signup {
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  border: 1.6px solid #f2a900;
+  transition: background 0.2s;
+}
+
+.btn-login {
+  background: transparent;
+  color: white;
+}
+
+.btn-login:hover {
+  background: #f2a900;
+  color: black;
+}
+
+.btn-signup {
+  background: #f2a900;
+  color: black;
+}
+
+.btn-signup:hover {
+  background: transparent;
+  color: white;
+}
+
 
 /* Seção Home */
 
 .home {
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0),
-   rgba(3, 3, 3, 0) 20vw,
-   rgba(240,233,238,1) 50vw, 
-   rgba(240,233,238,1) 80vw, 
-   rgba(240,233,238,1) 100vw),
-    url(imgs/escritorio\ sertec.jpeg); 
+      rgba(3, 3, 3, 0) 20vw,
+      rgba(240, 233, 238, 1) 50vw,
+      rgba(240, 233, 238, 1) 80vw,
+      rgba(240, 233, 238, 1) 100vw),
+    url(imgs/escritorio\ Fundo_SejaNossoCliente);
   background-size: contain;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   background-position: right;
 }
 
-.home .content{
+.home .content {
   padding: 7em 0 22em 0;
 }
 
-.home .headline{
+.home .headline {
   width: 55%;
 }
 
-.home .buttons{
+.home .buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
@@ -338,7 +482,7 @@ header {
   margin: -7em 0;
 }
 
-.lead .content{
+.lead .content {
   padding: 0 0;
   display: flex;
   flex-direction: row;
@@ -356,7 +500,7 @@ header {
   box-shadow: 4px 4px 4px 0px rgb(0, 0, 0, 0.25);
 }
 
-.lead img{
+.lead img {
   width: 20%;
   height: fit-content;
   align-self: center;
@@ -372,7 +516,7 @@ header {
   background-color: var(--azul-ID);
 }
 
-.serviços .content{
+.serviços .content {
   padding-top: 20em;
   display: flex;
   flex-direction: column;
@@ -391,7 +535,7 @@ header {
   justify-content: space-evenly;
 }
 
-.serviço-box-father div{
+.serviço-box-father div {
   flex-grow: 1;
   flex-basis: 30%;
   max-width: 320px;
@@ -404,7 +548,8 @@ header {
   box-shadow: 5px 5px 5px 0px rgb(0, 0, 0, 0.25);
 }
 
-.serviço-box-father p, h3{
+.serviço-box-father p,
+h3 {
   margin: 0 0 1em 0;
   text-align: center;
 }
@@ -413,12 +558,13 @@ header {
   font-size: 3rem;
 }
 
-.serviços h2{
+.serviços h2 {
   color: var(--bg);
   align-self: center;
 }
 
-#button-serviços, #button-sobre{
+#button-serviços,
+#button-sobre {
   margin-top: 2em;
   align-self: center;
 }
@@ -438,7 +584,7 @@ header {
   align-self: center;
 }
 
-.especialidades .box-esp{
+.especialidades .box-esp {
   display: flex;
   padding: 4em 3em;
   margin: 3.5em 0em;
@@ -452,41 +598,45 @@ header {
   width: 66%;
 }
 
-#advogado, #agencia, #mei {
+#advogado,
+#agencia,
+#mei {
   justify-content: end;
   background-size: contain;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   background-position: left;
 }
 
-#saude, #comercio, #publico {
+#saude,
+#comercio,
+#publico {
   background-size: contain;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   background-position: right;
 }
 
 #advogado {
-  background-image: var(--especialidades-gradient-right), url(imgs/advogado.jpg); 
+  background-image: var(--especialidades-gradient-right), url(imgs/advogado.jpg);
 }
 
 #saude {
-  background-image: var(--especialidades-gradient-left), url(imgs/saude.jpg); 
+  background-image: var(--especialidades-gradient-left), url(imgs/saude.jpg);
 }
 
 #agencia {
-  background-image: var(--especialidades-gradient-right), url(imgs/agencia.jpg); 
+  background-image: var(--especialidades-gradient-right), url(imgs/agencia.jpg);
 }
 
 #comercio {
-  background-image: var(--especialidades-gradient-left), url(imgs/comercio.jpg); 
+  background-image: var(--especialidades-gradient-left), url(imgs/comercio.jpg);
 }
 
 #mei {
-  background-image: var(--especialidades-gradient-right), url(imgs/mei.jpg); 
+  background-image: var(--especialidades-gradient-right), url(imgs/mei.jpg);
 }
 
 #publico {
-  background-image: var(--especialidades-gradient-left), url(imgs/publico.jpg); 
+  background-image: var(--especialidades-gradient-left), url(imgs/publico.jpg);
 }
 
 /* Seção Parceiros */
@@ -495,23 +645,23 @@ header {
   background-color: var(--roxo-dark);
 }
 
-.parceiros #logo{
+.parceiros #logo {
   width: 300px;
   margin: 3em 0 0 0;
 }
 
-.parceiros h2{
+.parceiros h2 {
   margin-bottom: 5rem;
   color: var(--gold);
 }
 
-.parceiros h4{
+.parceiros h4 {
   font-size: 3.8rem;
   text-transform: none;
   color: var(--branco-ID);
 }
 
-.parceiros p{
+.parceiros p {
   font-size: 3rem;
 }
 
@@ -527,7 +677,7 @@ header {
   display: none;
 }
 
-.parceiros #demonstrativo{
+.parceiros #demonstrativo {
   width: 100%;
   margin: 0;
   align-self: baseline;
@@ -571,12 +721,12 @@ header {
 
 .sobre #div2 {
   background-image: linear-gradient(to left,
-  rgba(38,42,57,0) 0%,
-  rgba(38,42,57,0) 20%,
-  rgb(0, 0, 0) 45%,
-  rgb(20, 21, 24) 100%), url(imgs/escritorio\ serctec\ 2.jpeg); 
+      rgba(38, 42, 57, 0) 0%,
+      rgba(38, 42, 57, 0) 20%,
+      rgb(0, 0, 0) 45%,
+      rgb(20, 21, 24) 100%), url(imgs/escritorio\ serctec\ 2.jpeg);
   background-size: contain;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   background-position: right;
 }
 
@@ -586,11 +736,11 @@ header {
   background-color: var(--azul-dark);
 }
 
-.contato h2{
+.contato h2 {
   color: var(--gold);
 }
 
-.contato .layout{
+.contato .layout {
   display: flex;
   justify-content: space-between;
   gap: 4em;
@@ -614,7 +764,7 @@ header {
   flex: 2;
 }
 
-.contato #c1 div{
+.contato #c1 div {
   display: flex;
   align-items: center;
   gap: 2em;
@@ -625,21 +775,22 @@ header {
   align-items: start;
   gap: 2em;
 }
+
 #c3 div p {
   margin: 0 0 1em 0;
 }
 
-.contato #c1 img{
+.contato #c1 img {
   width: 40px;
   height: fit-content;
 }
 
-.contato #c2 img{
+.contato #c2 img {
   width: 60%;
   margin-left: 4em;
 }
 
-.contato #c3 img{
+.contato #c3 img {
   width: 70px;
   height: fit-content;
 }
@@ -665,7 +816,7 @@ header {
   height: 100%;
   background-color: var(--roxo-ID);
 }
- 
+
 iframe {
   width: 100%;
   height: 100%;
@@ -679,14 +830,15 @@ footer {
   background-color: var(--azul-dark);
 }
 
-footer .content{
+footer .content {
   padding: 2em 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-footer a, footer p {
+footer a,
+footer p {
   font-family: 'futura';
   font-size: 2rem;
   color: white;
@@ -697,32 +849,48 @@ footer a:hover {
   color: var(--gold);
 }
 
-@media screen and (min-width: 1400px) { /*Adaptação Mobile Home */
+@media screen and (min-width: 1400px) {
+
+  /*Adaptação Mobile Home */
   .home {
-    background-image: linear-gradient(to left, rgba(240,233,238,0),
-     rgba(240,233,238,0) 20vw,
-     rgba(240,233,238,1) 40vw, 
-     rgba(240,233,238,1) 60vw, 
-     rgba(240,233,238,1) 100vw),
-      url(imgs/escritorio\ sertec.jpeg); 
+    background-image: linear-gradient(to left, rgba(240, 233, 238, 0),
+        rgba(240, 233, 238, 0) 20vw,
+        rgba(240, 233, 238, 1) 40vw,
+        rgba(240, 233, 238, 1) 60vw,
+        rgba(240, 233, 238, 1) 100vw),
+      url(imgs/escritorio\ sertec.jpeg);
     background-size: contain;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     background-position: right;
   }
 }
 
-@media screen and (max-width: 999px) { /* Header Mobile Resposiva */ 
+/* Mobile */
+/* ============================= */
+/* Padrão (desktop) */
+/* ============================= */
+#first-nav {
+  display: flex; /* navbar principal aparece */
+}
 
+#mobile-nav {
+  display: none; /* navbar mobile escondida */
+}
+
+.sidebar {
+  display: none; /* menu lateral escondido */
+}
+
+/* ============================= */
+/* Mobile (até 999px) */
+/* ============================= */
+@media screen and (max-width: 999px) {
   #first-nav {
-    display: none;
+    display: none; /* esconde a nav desktop */
   }
 
   #mobile-nav {
-    display: block;
-  }
-
-  #mobile-nav {
-    display: flex;
+    display: flex; /* mostra a nav mobile */
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
@@ -730,89 +898,99 @@ footer a:hover {
     width: 90%;
     padding: 1em;
   }
-  
-  #mobile-nav #logo {
+
+  #mobile-nav .logo {
     width: 50%;
-    padding: 0;
     display: flex;
     justify-content: left;
     align-items: center;
   }
 
   #mobile-nav img {
-    max-width: 300px;
+    max-width: 120px; /* reduzido pra caber no mobile */
     width: 100%;
   }
 
   .mobile-menu-icon {
     display: flex;
-    width: 50%;
+    width: auto;
     color: white;
-    font-size: 3em;
-    align-self: center;
-    justify-content: center;
-}
+    font-size: 2.5em;
+    cursor: pointer;
+  }
 
   .sidebar {
+    display: flex; /* agora só aparece no mobile */
     position: fixed;
     top: 0;
+    right: -200px; /* escondida inicialmente */
     width: 180px;
-    height: fit-content;
-    padding: 0 2em 2em 0;
+    height: 100vh;
     background-color: var(--azul-ID);
     border-radius: 0 0 0 .5em;
     color: white;
-    right: -200px;
+    flex-direction: column;
+    padding: 2em 1em;
     transition: right 0.3s ease-in-out;
     z-index: 1001;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    box-shadow: -5px 5px 5px 0 rgb(0, 0, 0, 0.25);
-}
-
-  .sidebar ul {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      text-align: left;
-  }
-
-  .sidebar ul a {
-      color: white;
-      text-decoration: none;
-      font-size: 1.8rem;
-      padding: .5em 0;
-      transition: color 0.3s;
-  }
-
-  .sidebar ul a:hover {
-      color: var(--gold);
   }
 
   .sidebar.show {
-      right: 0;
+    right: 0; /* aparece quando abre */
+  }
+
+  .sidebar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 2em;
+  }
+
+  .sidebar ul a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+
+  .sidebar ul a:hover {
+    color: var(--gold);
   }
 
   .close-btn {
     align-self: flex-end;
-    margin: .5em 0 0 0;
+    font-size: 2em;
     cursor: pointer;
-    font-size: 3em;
-  }
-
-  .fa-solid:hover {
-    color: var(--gold);
   }
 }
 
-@media screen and (min-width: 680px) and (max-width: 768px){ /*Adaptação Mobile Especiliadades */
-  #advogado, #agencia, #mei, #saude, #comercio, #publico {
+@media screen and (min-width: 680px) and (max-width: 768px) {
+  #first-nav {
+  display: flex; /* navbar principal aparece */
+}
+
+#mobile-nav {
+  display: none; /* navbar mobile escondida */
+}
+
+.sidebar {
+  display: none; /* menu lateral escondido */
+}
+
+
+  /*Adaptação Mobile Especiliadades */
+  #advogado,
+  #agencia,
+  #mei,
+  #saude,
+  #comercio,
+  #publico {
     background-size: cover;
   }
 }
 
-@media screen and (max-width: 1240px) { /*Adaptação de Quebra de Layout Home e Lead*/
+@media screen and (max-width: 1240px) {
+
+  /*Adaptação de Quebra de Layout Home e Lead*/
   .home {
     background-size: cover;
   }
@@ -822,35 +1000,39 @@ footer a:hover {
   }
 }
 
-@media screen and (max-width: 1160px) { /*Adaptação Mobile Contato */
+@media screen and (max-width: 1160px) {
+
+  /*Adaptação Mobile Contato */
   .contato #email p {
     word-break: break-word;
   }
 }
 
-@media screen and (max-width: 982px) { /*Adaptação Mobile Sobre */
+@media screen and (max-width: 982px) {
+  /*Adaptação Mobile Sobre */
 
   .sobre .sobre-box {
     flex-direction: column-reverse;
     gap: 4em;
   }
-  
+
   .sobre-box div {
     display: flex;
     flex-direction: column;
     width: 100%;
   }
-  
+
   .sobre #div2 {
     padding-top: 50vh;
     background-image: linear-gradient(to bottom,
-    rgba(38,42,57,0) 0%,
-    rgba(38,42,57,0) 100%), url(imgs/escritorio\ serctec\ 2\ mob.jpg); 
+        rgba(38, 42, 57, 0) 0%,
+        rgba(38, 42, 57, 0) 100%), url(imgs/escritorio\ serctec\ 2\ mob.jpg);
     background-position: top;
   }
 }
 
-@media screen and (max-width: 768px) { /* Configurações Gerais de responsividade */
+@media screen and (max-width: 768px) {
+  /* Configurações Gerais de responsividade */
 
   button {
     width: 100%;
@@ -861,43 +1043,43 @@ footer a:hover {
   h1 {
     font-size: 4rem;
   }
-  
+
   h2 {
     font-size: 3.2rem;
     margin: 0 0 2rem 0;
   }
-  
+
   h3 {
     font-size: 2.8rem;
   }
-  
+
   h4 {
     font-size: 2.2rem;
     margin: 0;
   }
-  
+
   p {
     font-size: 1.8rem;
   }
 
   .home {
     background-image: linear-gradient(to top,
-      rgba(240,233,238,0),
-      rgba(240,233,238,0),
-      rgba(240,233,238,1),
-      rgba(240,233,238,1),
-      rgba(240,233,238,1)),
-    url(imgs/escritorio\ sertec\ mob.png); 
+        rgba(240, 233, 238, 0),
+        rgba(240, 233, 238, 0),
+        rgba(240, 233, 238, 1),
+        rgba(240, 233, 238, 1),
+        rgba(240, 233, 238, 1)),
+      url(imgs/escritorio\ sertec\ mob.png);
     background-position: bottom;
     padding-bottom: 40vh;
     background-size: contain;
   }
-  
-  .home .headline{
+
+  .home .headline {
     width: 100%;
   }
 
-  .home h1{
+  .home h1 {
     font-size: 3.4rem;
   }
 
@@ -906,8 +1088,8 @@ footer a:hover {
     padding-top: 0;
     background-color: var(--azul-ID);
   }
-  
-  .lead .content{
+
+  .lead .content {
     padding: 0 0;
     margin-top: -8vh;
     display: flex;
@@ -915,111 +1097,117 @@ footer a:hover {
     align-items: center;
     gap: 2em;
   }
-  
+
   .lead .box-lead {
     align-items: center;
   }
-  
-  .lead img{
+
+  .lead img {
     width: 20%;
     height: fit-content;
     align-self: center;
   }
-  
+
   .lead p {
     font-size: 2rem;
   }
-  
-  .serviços .content{
+
+  .serviços .content {
     padding-top: 20em;
     display: flex;
     flex-direction: column;
     gap: 2em;
   }
-  
+
   #box-service1 {
     flex-wrap: wrap;
     gap: 2em;
   }
-  
+
   #box-service2 {
     flex-wrap: wrap;
     gap: 2em;
     justify-content: space-evenly;
   }
-  
-  .serviço-box-father div{
+
+  .serviço-box-father div {
     min-width: 200px;
   }
-  
-  .serviço-box-father p, h3{
+
+  .serviço-box-father p,
+  h3 {
     margin: 0 0 1em 0;
     text-align: center;
   }
-  
+
   .serviço-box-father #prefeituras {
     font-size: 3rem;
   }
-  
-  .serviços h2{
+
+  .serviços h2 {
     color: var(--bg);
     align-self: center;
     text-align: center;
   }
-  
-  #button-serviços, #button-sobre{
+
+  #button-serviços,
+  #button-sobre {
     margin-top: 2em;
     align-self: center;
   }
-  
-  .especialidades .box-esp{
+
+  .especialidades .box-esp {
     padding: 25vh 3em 4em 3em;
   }
-  
+
   .box-esp div {
     width: 100%;
   }
 
-  #advogado, #agencia, #mei {
-    background-position: top;
-  }
-  
-  #saude, #comercio, #publico {
-    background-position: top;
-  }
-  
-  #advogado {
-    background-image: var(--especialidades-gradient-top), url(imgs/advogado.jpg); 
-  }
-  
-  #saude {
-    background-image: var(--especialidades-gradient-top), url(imgs/saude.jpg); 
-  }
-  
-  #agencia {
-    background-image: var(--especialidades-gradient-top), url(imgs/agencia.jpg); 
-  }
-  
-  #comercio {
-    background-image: var(--especialidades-gradient-top), url(imgs/comercio.jpg); 
-  }
-  
+  #advogado,
+  #agencia,
   #mei {
-    background-image: var(--especialidades-gradient-top), url(imgs/mei.jpg); 
+    background-position: top;
   }
-  
+
+  #saude,
+  #comercio,
   #publico {
-    background-image: var(--especialidades-gradient-top), url(imgs/publico.jpg); 
+    background-position: top;
   }
-  
-  .parceiros h4{
+
+  #advogado {
+    background-image: var(--especialidades-gradient-top), url(imgs/advogado.jpg);
+  }
+
+  #saude {
+    background-image: var(--especialidades-gradient-top), url(imgs/saude.jpg);
+  }
+
+  #agencia {
+    background-image: var(--especialidades-gradient-top), url(imgs/agencia.jpg);
+  }
+
+  #comercio {
+    background-image: var(--especialidades-gradient-top), url(imgs/comercio.jpg);
+  }
+
+  #mei {
+    background-image: var(--especialidades-gradient-top), url(imgs/mei.jpg);
+  }
+
+  #publico {
+    background-image: var(--especialidades-gradient-top), url(imgs/publico.jpg);
+  }
+
+  .parceiros h4 {
     text-align: center;
   }
-  
-  .parceiros p{
+
+  .parceiros p {
     text-align: center;
   }
-  
+
   .parceiros .content div {
     width: 100%;
     display: flex;
@@ -1027,83 +1215,87 @@ footer a:hover {
     justify-content: center;
     align-items: center;
   }
-  
+
   #p2 {
     display: none;
   }
 
-  .parceiros #demonstrativo-mob{
+  .parceiros #demonstrativo-mob {
     display: block;
     width: 100%;
     max-width: 400px;
   }
 
-  .contato .layout{
+  .contato .layout {
     flex-direction: column;
     gap: 4em;
   }
-  
+
   .contato #c1 {
     flex: none;
     flex-direction: column;
     gap: 2em;
     width: 100%;
   }
-  
+
   #c3 div p {
     margin: 0 0 1em 0;
   }
-  
-  .contato #c2 img{
+
+  .contato #c2 img {
     width: 50%;
     margin: 4em;
   }
-  
+
   .contato #redes-sociais {
     max-width: 300px;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 4em;
   }
-  
+
   .contato #redes-sociais img {
     width: 50px;
     margin: 0;
   }
-  
+
   .contato #local {
     margin-bottom: 2em;
   }
 
-  footer .content{
+  footer .content {
     gap: 2em;
     flex-direction: column;
   }
-  
-  footer a, footer p {
+
+  footer a,
+  footer p {
     text-align: center;
   }
 }
 
-@media screen and (max-width: 570px) { /* Adaptações Home Especialidades e Sobre */
+@media screen and (max-width: 570px) {
+
+  /* Adaptações Home Especialidades e Sobre */
   .home {
     background-image: linear-gradient(to top,
-      rgba(240,233,238,0)60vh,
-      rgba(240,233,238,1),
-      rgba(240,233,238,1)),
-    url(imgs/escritorio\ sertec\ mob.png); 
+        rgba(240, 233, 238, 0)60vh,
+        rgba(240, 233, 238, 1),
+        rgba(240, 233, 238, 1)),
+      url(imgs/escritorio\ sertec\ mob.png);
     background-position: bottom;
     padding-bottom: 20vh;
-}
-  .especialidades .box-esp{
+  }
+
+  .especialidades .box-esp {
     padding-top: 20vh;
   }
 
   .sobre #div2 {
     padding-top: 30vh;
     background-image: linear-gradient(to bottom,
-    rgba(38,42,57,0) 0%,
-    rgba(38,42,57,0) 100%), url(imgs/escritorio\ serctec\ 2\ mob.jpg); 
+        rgba(38, 42, 57, 0) 0%,
+        rgba(38, 42, 57, 0) 100%), url(imgs/escritorio\ serctec\ 2\ mob.jpg);
     background-position: top;
   }
 }
@@ -1121,47 +1313,68 @@ footer a:hover {
   transition: all 1s;
 }
 
-.lead .content :nth-child(2) {transition-delay: 200ms;}
+.lead .content :nth-child(2) {
+  transition-delay: 200ms;
+}
 
-.lead .content :nth-child(3) {transition-delay: 400ms;}
+.lead .content :nth-child(3) {
+  transition-delay: 400ms;
+}
 
-#box-service1 :nth-child(2){transition-delay: 200ms;}
+#box-service1 :nth-child(2) {
+  transition-delay: 200ms;
+}
 
-#box-service2 :nth-child(2){transition-delay: 200ms;}
+#box-service2 :nth-child(2) {
+  transition-delay: 200ms;
+}
 
-#box-service2 :nth-child(3){transition-delay: 400ms;}
- 
-.serviços button {transition-delay: 600ms;}
+#box-service2 :nth-child(3) {
+  transition-delay: 400ms;
+}
 
-.contato #c2{
+.serviços button {
+  transition-delay: 600ms;
+}
+
+.contato #c2 {
   transition-delay: 1000ms;
   transition: 5s;
 }
 
-.contato .layout #c3{transition-delay: 200ms;}
+.contato .layout #c3 {
+  transition-delay: 200ms;
+}
 
 /* Politicas e termos de Uso */
 
 .modal {
-  display: none; /* Escondido por padrão */
-  position: fixed; /* Fica fixo na tela */
-  z-index: 1000; /* Fica acima de outros elementos */
+  display: none;
+  /* Escondido por padrão */
+  position: fixed;
+  /* Fica fixo na tela */
+  z-index: 1000;
+  /* Fica acima de outros elementos */
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto; /* Habilita o scroll se necessário */
-  background-color: rgba(0,0,0,0.5); /* Fundo escuro com transparência */
+  overflow: auto;
+  /* Habilita o scroll se necessário */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Fundo escuro com transparência */
 }
 
 .modal-content {
   background-color: var(--azul-dark);
-  margin: 15% auto; /* Centraliza o modal na tela */
+  margin: 15% auto;
+  /* Centraliza o modal na tela */
   padding: 4em;
   border: 3px solid var(--gold);
-  width: 75%; /* Largura do modal */
+  width: 75%;
+  /* Largura do modal */
   max-width: 1000px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
 }
 

@@ -34,19 +34,23 @@ const LoginPage = () => {
 
   return (
     <div className="form-container">
-      <h2>Welcome Back</h2>
+      <div className='title'>
+        <h2>Bem vindo de volta!</h2>
+        <p>Por favor faça login para continuar</p>
+      </div>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label>Email</label>
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+          <input type="email" placeholder='Seu melhor email' value={email} onChange={(e) => setEmail(e.target.value)} required />
         </div>
         <div className="form-group">
           <label>Senha</label>
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+          <input type="password" placeholder='Digite sua senha' value={password} onChange={(e) => setPassword(e.target.value)} required />
         </div>
         <button type="submit" className="btn">Log In</button>
         {error && <p className="error-message">{error}</p>}
       </form>
+      <hr className="divider" />
       <p className="link-text">Não tem uma conta? <Link to="/signup">Cadastre-se</Link></p>
     </div>
   );

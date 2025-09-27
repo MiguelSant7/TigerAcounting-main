@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useHref, useNavigate } from 'react-router-dom';
 
 const DashboardPage = () => {
   const [userName, setUserName] = useState('');
@@ -45,8 +45,9 @@ const DashboardPage = () => {
   return (
     <div className="dashboard-container">
       <h2>Painel de Controle</h2>
-      <p>Olá, {userName}!</p>
+      <h3>Olá, {userName}!</h3>
       <p>Novidades sobre seu sistema financeiro chegarão em breve.</p>
+      <button onClick={()=> window.location.href = 'http://127.0.0.1:5500/landing/index.html#home'} className="btn">Home Page</button>
       <button onClick={handleLogout} className="btn">Sair</button>
     </div>
   );

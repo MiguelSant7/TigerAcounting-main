@@ -35,31 +35,75 @@ const SignupPage = () => {
 
   return (
     <div className="form-container">
-      <h2>Sign Up</h2>
+      <div className="title">
+        <h2>Cadastre-se</h2>
+        <p>Por favor preencha o formulario para cria sua conta.</p>
+      </div>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label>Nome Completo</label>
-          <input type="text" value={nome} onChange={(e) => setNome(e.target.value)} required />
+          <input 
+            type="text" 
+            placeholder="Digite seu nome completo" 
+            value={nome} 
+            onChange={(e) => setNome(e.target.value)} 
+            required 
+          />
         </div>
+
+        <div className="double-form">
+          <div className="form-group">
+          <label>CPF/CNPJ</label>
+          <input 
+            type="text" 
+            placeholder="Digite seu CPF ou CNPJ" 
+            value={cpfCnpj} 
+            onChange={(e) => setCpfCnpj(e.target.value)} 
+            required 
+          />
+          </div>
+
+          <div className="form-group">
+            <label>Telefone</label>
+            <input 
+              type="tel" 
+              placeholder="(00) 00000-0000" 
+              value={telefone} 
+              onChange={(e) => setTelefone(e.target.value)} 
+              required 
+            />
+          </div>
+
+        </div>
+
         <div className="form-group">
           <label>Email</label>
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+          <input 
+            type="email" 
+            placeholder="Seu melhor e-mail" 
+            value={email} 
+            onChange={(e) => setEmail(e.target.value)} 
+            required 
+          />
         </div>
+        
         <div className="form-group">
-          <label>CPF/CNPJ</label>
-          <input type="text" value={cpfCnpj} onChange={(e) => setCpfCnpj(e.target.value)} required />
+          <label>Senha</label>
+          <input 
+            type="password" 
+            placeholder="Crie uma senha" 
+            value={password} 
+            onChange={(e) => setPassword(e.target.value)} 
+            required 
+            maxLength={72} 
+          />
         </div>
-        <div className="form-group">
-          <label>Telefone</label>
-          <input type="tel" value={telefone} onChange={(e) => setTelefone(e.target.value)} required />
-        </div>
-        <div className="form-group">
-            <label>Senha</label>
-            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required maxLength={72} />
-        </div>
+
         <button type="submit" className="btn">Cadastrar</button>
         {error && <p className="error-message">{error}</p>}
       </form>
+
+      <hr className="divider" />
       <p className="link-text">Já tem uma conta? <Link to="/login">Faça Login</Link></p>
     </div>
   );

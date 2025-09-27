@@ -719,6 +719,7 @@ h3 {
   justify-self: center;
 }
 
+
 /* Seção Sobre */
 .sobre {
   display: flex;
@@ -742,23 +743,52 @@ h3 {
 
 
 .sobre-box div {
+  flex-direction: column; 
+  justify-content: center; width: 60%;
+}
+
+#div1 .image {
+  max-height: 100%;            /* respeita a altura do container */
+  max-width: 50%;              /* ocupa no máximo metade da largura */
+  object-fit: contain;         /* mantém proporção da imagem */
+}
+
+#div1 {
+  display: flex;               /* lado a lado */
+  align-items: center;         /* centraliza verticalmente dentro do container */
+  justify-content: space-between;
+  max-height: 80vh;            /* limite de altura do container */
+  padding: 1rem;
+  gap: 1rem;                   /* espaço entre imagem e texto */
+}
+
+#div1 .image {
+  max-height: 100%;            /* respeita a altura do container */
+  max-width: 50%;              /* ocupa no máximo metade da largura */
+  object-fit: contain;         /* mantém proporção da imagem */
+}
+
+#div1 .text {
+  flex: 1;                     /* ocupa espaço restante */
+  text-align: left;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  width: 50%;
-  width: 100%;
-  height: fit-content;
-  align-self: center;
+  overflow: hidden;            /* evita que o texto passe do container */
 }
 
-.sobre-box img {
-  width: 100%;
-  max-width: 320px;
-  height: fit-content;
-  align-self: center;
+#div1 .text h1 {
+  font-size: clamp(1rem, 4vw, 3rem); /* cresce e encolhe conforme largura */
+  line-height: 1.2;
+  margin: 0 0 0.5rem 0;
+  word-wrap: break-word;
 }
 
-
-
+#div1 .text p {
+  font-size: clamp(0.8rem, 2.5vw, 1.5rem);
+  margin: 0;
+  word-wrap: break-word;
+}
 
 
 /* estilização da imagem de fundo sobre  */
@@ -770,6 +800,7 @@ h3 {
 
 
   /* Imagem de fundo + gradiente */
+  
   background-image: var(--especialidades-gradient-right),
     url(/landing/imgs/Fundo_SobreNos.png);
   background-size: contain;
@@ -781,6 +812,7 @@ h3 {
   border-radius: 12px;
   min-height: 400px;
 }
+
 
 /* Seção Contato */
 
@@ -901,14 +933,12 @@ footer a:hover {
   color: var(--orange);
 }
 
-@media screen and (min-width: 1400px) {
-
-  /*Adaptação Mobile Home */
+@media screen and (min-width: 600px) {
   .home {
-    background-image: linear-gradient(to left, rgba(240, 233, 238, 0),
-        rgba(240, 233, 238, 0) 30vw,
+    background-image: linear-gradient(to left, rgba(255, 253, 255, 0),
+        rgba(240, 233, 238, 0) 20vw,
         rgba(240, 233, 238, 1) 50vw,
-        rgba(240, 233, 238, 1) 70vw,
+        rgba(240, 233, 238, 1) 80vw,
         rgba(240, 233, 238, 1) 100vw),
       url(/landing/imgs/Fundo_SejaNossoCliente.png);
     background-size: contain;
@@ -916,6 +946,7 @@ footer a:hover {
     background-position: right;
   }
 }
+
 
 /* Mobile */
 /* ============================= */
@@ -1103,6 +1134,7 @@ footer a:hover {
 
 @media screen and (max-width: 768px) {
   /* Configurações Gerais de responsividade */
+
 
   button {
     width: 100%;

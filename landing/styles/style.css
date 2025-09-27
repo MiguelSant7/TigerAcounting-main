@@ -281,14 +281,12 @@ header {
   height: auto;
 }
 
-/* Container da direita (links + botões) */
+/* Container da direita*/
 .nav-right {
   display: flex;
   align-items: center;
   gap: 2em;
-  /* espaço entre links e botões */
   flex-wrap: wrap;
-  /* permite quebrar para baixo se faltar espaço */
 }
 
 /* Links */
@@ -326,7 +324,6 @@ header {
   border: 2px solid #FF8C00 !important;
   transition: all 0.2s;
   white-space: nowrap;
-  /* impede quebrar dentro do botão */
 }
 
 .btn-login {
@@ -354,7 +351,6 @@ header {
 @media (max-width: 900px) {
   #first-nav {
     flex-direction: column;
-    /* logo em cima, links embaixo */
     align-items: flex-start;
     gap: 1em;
   }
@@ -372,7 +368,6 @@ header {
 
   .nav-login {
     flex-direction: row;
-    /* mantém login e signup lado a lado */
   }
 }
 
@@ -438,9 +433,7 @@ header {
 }
 
 
-/* Seção Home FALTANDO!!!! */
-
-/* ------------------------------------------------------------ */
+/* Seção Home */
 .home {
   background-image: var(--especialidades-gradient-left),
     url(/landing/imgs/Fundo_SejaNossoCliente.png);
@@ -448,8 +441,6 @@ header {
   background-repeat: no-repeat;
   background-position: right;
 }
-
-/* ------------------------------------------------------------ */
 
 .home .content {
   padding: 7em 0 22em 0;
@@ -725,37 +716,37 @@ h3 {
 }
 
 #div1 .image {
-  max-height: 100%;            /* respeita a altura do container */
-  max-width: 50%;              /* ocupa no máximo metade da largura */
-  object-fit: contain;         /* mantém proporção da imagem */
+  max-height: 100%;            
+  max-width: 50%;              
+  object-fit: contain;        
 }
 
 #div1 {
-  display: flex;               /* lado a lado */
-  align-items: center;         /* centraliza verticalmente dentro do container */
+  display: flex;               
+  align-items: center;         
   justify-content: space-between;
-  max-height: 80vh;            /* limite de altura do container */
+  max-height: 80vh;            
   padding: 1rem;
-  gap: 1rem;                   /* espaço entre imagem e texto */
+  gap: 1rem;                  
 }
 
 #div1 .image {
-  max-height: 100%;            /* respeita a altura do container */
-  max-width: 50%;              /* ocupa no máximo metade da largura */
-  object-fit: contain;         /* mantém proporção da imagem */
+  max-height: 100%;            
+  max-width: 50%;              
+  object-fit: contain;         
 }
 
 #div1 .text {
-  flex: 1;                     /* ocupa espaço restante */
+  flex: 1;                     
   text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  overflow: hidden;            /* evita que o texto passe do container */
+  overflow: hidden;            
 }
 
 #div1 .text h1 {
-  font-size: clamp(1rem, 4vw, 3rem); /* cresce e encolhe conforme largura */
+  font-size: clamp(1rem, 4vw, 3rem); 
   line-height: 1.2;
   margin: 0 0 0.5rem 0;
   word-wrap: break-word;
@@ -931,17 +922,14 @@ footer a:hover {
 /* ============================= */
 #first-nav {
   display: flex;
-  /* navbar principal aparece */
 }
 
 #mobile-nav {
   display: none;
-  /* navbar mobile escondida */
 }
 
 .sidebar {
   display: none;
-  /* menu lateral escondido */
 }
 
 .sobre-box #img {
@@ -956,12 +944,10 @@ footer a:hover {
 @media screen and (max-width: 999px) {
   #first-nav {
     display: none;
-    /* esconde a nav desktop */
   }
 
   #mobile-nav {
     display: flex;
-    /* mostra a nav mobile */
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
@@ -979,7 +965,6 @@ footer a:hover {
 
   #mobile-nav img {
     max-width: 120px;
-    /* reduzido pra caber no mobile */
     width: 100%;
   }
 
@@ -993,11 +978,9 @@ footer a:hover {
 
   .sidebar {
     display: flex;
-    /* agora só aparece no mobile */
     position: fixed;
     top: 0;
     right: -200px;
-    /* escondida inicialmente */
     width: 180px;
     height: 100vh;
     background-color: var(--dark-ID);
@@ -1011,7 +994,6 @@ footer a:hover {
 
   .sidebar.show {
     right: 0;
-    /* aparece quando abre */
   }
 
   .sidebar ul {
@@ -1041,17 +1023,14 @@ footer a:hover {
 @media screen and (min-width: 680px) and (max-width: 768px) {
   #first-nav {
     display: flex;
-    /* navbar principal aparece */
   }
 
   #mobile-nav {
     display: none;
-    /* navbar mobile escondida */
   }
 
   .sidebar {
     display: none;
-    /* menu lateral escondido */
   }
 
 
@@ -1429,29 +1408,22 @@ footer a:hover {
 
 .modal {
   display: none;
-  /* Escondido por padrão */
   position: fixed;
-  /* Fica fixo na tela */
   z-index: 1000;
-  /* Fica acima de outros elementos */
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
-  /* Habilita o scroll se necessário */
   background-color: rgba(0, 0, 0, 0.5);
-  /* Fundo escuro com transparência */
 }
 
 .modal-content {
   background-color: var(--azul-dark);
   margin: 15% auto;
-  /* Centraliza o modal na tela */
   padding: 4em;
   border: 3px solid var(--orange);
   width: 75%;
-  /* Largura do modal */
   max-width: 1000px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   border-radius: 5px;

@@ -48,7 +48,7 @@ const DashboardPage = () => {
       <h3>Olá, {userName}!</h3>
       <p>Novidades sobre seu sistema financeiro chegarão em breve.</p>
       <button onClick={()=> window.location.href = 'http://127.0.0.1:5500/landing/index.html#home'} className="btn">Home Page</button>
-      <button onClick={handleLogout} className="btn">Sair</button>
+      <button onClick={handleLogout} className="btn" id='btn-logout'>Sair</button>
     </div>
   );
 };

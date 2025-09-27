@@ -1,0 +1,29 @@
+.main-footer {
+  background-color: #1c1917; /* Mesma cor escura do header */
+  color: #a8a29e; /* Cor do texto mais suave */
+  padding: 2rem 5%;
+  border-top: 1px solid #44403c;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Permite que os itens quebrem a linha em telas menores */
+  gap: 1rem; /* Espaçamento entre os itens */
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem; /* Espaçamento entre os links */
+}
+
+.footer-links a {
+  color: #a8a29e;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #f97316; /* Laranja para o efeito hover */
+}

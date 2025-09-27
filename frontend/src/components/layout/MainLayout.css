@@ -1,0 +1,16 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Garante que o container ocupe no mínimo 100% da altura da tela */
+}
+
+.main-content {
+  flex: 1; /* Faz o conteúdo principal crescer e ocupar o espaço disponível entre o header e o footer */
+  
+  /* As 3 linhas abaixo centralizam o formulário (ou qualquer conteúdo) no espaço principal */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  padding: 2rem; /* Adiciona um respiro para o conteúdo */
+}

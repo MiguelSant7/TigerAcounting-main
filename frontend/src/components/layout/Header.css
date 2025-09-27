@@ -1,0 +1,202 @@
+/* Sidebar por padrão fica escondida fora da tela */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px; /* Começa fora da tela */
+  width: 250px;
+  height: 100%;
+  background-color: #1c1917; /* Mesma cor do header */
+  transition: right 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+/* Quando a sidebar tiver a classe 'open', ela desliza para dentro da tela */
+.sidebar.open {
+  right: 0;
+}
+
+
+header {
+  background-color: black;
+  width: 100%;
+
+}
+
+#first-nav {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+  max-width: 1280px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Logo */
+.logo {
+  margin-right: 40px;
+}
+
+
+.logo img {
+  max-width: 150px !important;
+  height: auto;
+}
+
+/* Container da direita (links + botões) */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  /* espaço entre links e botões */
+  flex-wrap: wrap;
+  /* permite quebrar para baixo se faltar espaço */
+}
+
+/* Links */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+.nav-links a {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 17px !important;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links a:hover:not(.btn-login, .btn-signup) {
+  color: orange;
+}
+
+/* Botões */
+.nav-login {
+  display: flex;
+  gap: 0.5em;
+}
+
+.btn-login,
+.btn-signup {
+  padding: 5px 15px;
+  border-radius: 4px;
+  font-size: 14px !important;
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid #FF8C00 !important;
+  transition: all 0.2s;
+  white-space: nowrap;
+  /* impede quebrar dentro do botão */
+}
+
+.btn-login {
+  margin-left: 29px;
+  background: transparent;
+  color: white;
+}
+
+.btn-login:hover {
+  background: #FF8C00 !important;
+  color: white !important; 
+}
+
+.btn-signup {
+  background: #FF8C00 !important;;
+  color: black;
+}
+
+.btn-signup:hover {
+  background: transparent !important;
+  color: white !important;
+}
+
+  /* responsividade */
+@media (max-width: 900px) {
+  #first-nav {
+    flex-direction: column;
+    /* logo em cima, links embaixo */
+    align-items: flex-start;
+    gap: 1em;
+  }
+
+  .nav-right {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.8em;
+  }
+
+  .nav-login {
+    flex-direction: row;
+    /* mantém login e signup lado a lado */
+  }
+}
+
+/* Logo */
+.logo img {
+  max-width: 40px;
+  height: auto;
+}
+
+/* Links do meio */
+.nav-links {
+  display: flex;
+  gap: 2em;
+}
+
+.nav-links a {
+  font-family: 'futura', sans-serif;
+  font-size: 17px;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: orange;
+}
+
+/* Botões à direita */
+.nav-login {
+  display: flex;
+  gap: 0.5em;
+  margin-right: 2em
+}
+
+.btn-login,
+.btn-signup {
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  border: 1.6px solid orange;
+  transition: background 0.2s;
+}
+
+.btn-login {
+  background-color: transparent;
+  color: white;
+}
+
+.btn-login:hover {
+  background-color: orange;
+  color: black;
+}
+
+.btn-signup {
+  background: orange;
+  color: black;
+}
+
+.btn-signup:hover {
+  background-color: transparent;
+  color: white;
+}

@@ -11,7 +11,7 @@ Este projeto do grupo **Projetos 1** tem como objetivo aplicar boas práticas de
 * **Frontend:** HTML, CSS e JavaScript → Estrutura, estilização responsiva e interatividade.
 * **Backend:** Python (FastAPI) → API para integração e persistência de dados.
 * **Node.js:** Configuração do ambiente frontend e execução de scripts.
-* **Banco de Dados:** MySQL → Armazenamento das informações financeiras.
+* **Banco de Dados:** SQLAlchemy → Armazenamento das informações de login.
 
 ## 👥 Equipe de Desenvolvimento
 
